@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE7BAB2A2875EA2100243DA4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7BAB292875EA2100243DA4 /* SignUpViewController.swift */; };
 		DEB3A1452872765C005481D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB3A1442872765C005481D9 /* AppDelegate.swift */; };
 		DEB3A1472872765C005481D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB3A1462872765C005481D9 /* SceneDelegate.swift */; };
 		DEB3A1492872765C005481D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB3A1482872765C005481D9 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE7BAB292875EA2100243DA4 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		DEB3A1412872765C005481D9 /* Movie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEB3A1442872765C005481D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEB3A1462872765C005481D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				DEB3A1462872765C005481D9 /* SceneDelegate.swift */,
 				DEB3A1482872765C005481D9 /* ViewController.swift */,
 				DEB3A14A2872765C005481D9 /* Main.storyboard */,
+				DE7BAB292875EA2100243DA4 /* SignUpViewController.swift */,
 				DEB3A14D2872765E005481D9 /* Assets.xcassets */,
 				DEB3A14F2872765E005481D9 /* LaunchScreen.storyboard */,
 				DEB3A1522872765E005481D9 /* Info.plist */,
@@ -140,6 +143,7 @@
 			files = (
 				DEB3A1492872765C005481D9 /* ViewController.swift in Sources */,
 				DEB3A1452872765C005481D9 /* AppDelegate.swift in Sources */,
+				DE7BAB2A2875EA2100243DA4 /* SignUpViewController.swift in Sources */,
 				DEB3A1472872765C005481D9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,7 +307,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -330,7 +334,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
