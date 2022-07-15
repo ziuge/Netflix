@@ -52,6 +52,7 @@ class SignUpViewController: UIViewController {
         }
     }
     
+    // TextField UI
     func changeTextField(_ textField: UITextField, buttonPH: String) {
         textField.backgroundColor = .lightGray
         textField.textColor = .white
@@ -67,18 +68,27 @@ class SignUpViewController: UIViewController {
         var signUpSuccess = false
         
         if emailTextField.text?.isEmpty == true {
-            print("이메일을 입력하세요")
+            showAlertController(title: "", message: "이메일을 입력하세요")
         } else if pwTextField.text?.isEmpty == true {
-            print("비밀번호를 입력하세요")
+            showAlertController(title: "", message: "비밀번호를 입력하세요")
         } else if pwTextField.text!.count < 6 {
-            print("비밀번호는 6자리 이상 작성해주세요")
+            showAlertController(title: "", message: "비밀번호는 6자리 이상 작성해주세요")
         } else if codeTextField.text?.allSatisfy({ $0.isNumber }) != true {
-            print("추천코드는 숫자만 입력 가능해요")
+            showAlertController(title: "", message: "추천코드는 숫자만 입력 가능해요")
         } else {
             signUpSuccess = true
             print("회원가입 완료!")
         }
         
+    }
+    
+    func showAlertController(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "확인", style: .cancel, handler: nil)
+        
+        alert.addAction(ok)
+        
+        present(alert, animated: true, completion: nil)
     }
     
     @IBAction func saveIdBtnClicked(_ sender: Any) {
