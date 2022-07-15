@@ -17,6 +17,9 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var infoSwitch: UISwitch!
     
+    @IBOutlet weak var saveIdBtn: UIButton!
+    @IBOutlet weak var savePwBtn: UIButton!
+    
     override func viewDidLoad() {
         changeTextField(emailTextField, buttonPH: "이메일 주소 또는 전화번호")
         changeTextField(pwTextField, buttonPH: "비밀번호")
@@ -30,10 +33,23 @@ class SignUpViewController: UIViewController {
         signUpButton.setTitleColor(.black, for: .normal)
         signUpButton.setTitleColor(.yellow, for: .highlighted)
         
-        
         infoSwitch.setOn(true, animated: true)
         infoSwitch.onTintColor = .red
         infoSwitch.thumbTintColor = .yellow
+        
+        if UserDefaults.standard.string(forKey: "email") != nil {
+            emailTextField.text = UserDefaults.standard.string(forKey: "email")
+            saveIdBtn.isSelected = true
+        } else {
+            emailTextField.text = nil
+        }
+        
+        if UserDefaults.standard.string(forKey: "password") != nil {
+            pwTextField.text = UserDefaults.standard.string(forKey: "password")
+            savePwBtn.isSelected = true
+        } else {
+            pwTextField.text = nil
+        }
     }
     
     func changeTextField(_ textField: UITextField, buttonPH: String) {
@@ -63,7 +79,27 @@ class SignUpViewController: UIViewController {
             print("회원가입 완료!")
         }
         
+    }
+    
+    @IBAction func saveIdBtnClicked(_ sender: Any) {
+        if saveIdBtn.isSelected {
+            saveIdBtn.isSelected = false
+        } else {
+            saveIdBtn.isSelected = true
+        }
         
+        UserDefaults.standard.set(emailTextField.text, forKey: "email")
+        
+    }
+    
+    @IBAction func savePwBtnClicked(_ sender: Any) {
+        if savePwBtn.isSelected {
+            savePwBtn.isSelected = false
+        } else {
+            savePwBtn.isSelected = true
+        }
+        
+        UserDefaults.standard.set(pwTextField.text, forKey: "password")
     }
     
     @IBAction func tapView(_ sender: Any) {
